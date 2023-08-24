@@ -86,7 +86,7 @@ The obvious differenc between them is when we create an instance of a class and 
 // Coding Question
 // 1. remove duplicate chars from a String
     // input : "aabbccdd" : output : abcd
-var inputString = "aabbccdd"
+var inputString = "aabbccdd"  // use Dic
 let outputString = String(Set(inputString))
 print("1.  \(outputString)\n")
 
@@ -94,7 +94,7 @@ print("1.  \(outputString)\n")
     // input : [1, 2, 2, 3, 4, 7, 5, 5]
     // output : [1, 2, 3, 4, 7, 5]
 
-var inputArray = [1, 2, 2, 3, 4, 7, 5, 5]
+var inputArray = [1, 2, 2, 3, 4, 7, 5, 5] // use Dic
 var outputArray = Set(inputArray)
 print("2.  \(outputArray)\n")
 
