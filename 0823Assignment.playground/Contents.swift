@@ -86,16 +86,33 @@ The obvious differenc between them is when we create an instance of a class and 
 // Coding Question
 // 1. remove duplicate chars from a String
     // input : "aabbccdd" : output : abcd
-var inputString = "aabbccdd"  // use Dic
-let outputString = String(Set(inputString))
+let inputString = "aabbccdd"
+var outputDic = [Character: Int]()
+
+for (index, character) in Array(inputString).enumerated() {
+    outputDic.updateValue(index, forKey: character)
+}
+var outputString = ""
+for i in outputDic.sorted(by: { $0.value < $1.value } ) {
+    outputString += String(i.key)
+}
 print("1.  \(outputString)\n")
 
 // 2. remove duplicate element from an array
     // input : [1, 2, 2, 3, 4, 7, 5, 5]
     // output : [1, 2, 3, 4, 7, 5]
 
-var inputArray = [1, 2, 2, 3, 4, 7, 5, 5] // use Dic
-var outputArray = Set(inputArray)
+let inputArray = [1, 2, 2, 3, 4, 7, 5, 5]
+var outputIntDic = [Int: Int]()
+var outputArray = [Int]()
+
+for (index, int) in inputArray.enumerated() {
+    outputIntDic.updateValue(index, forKey: int)
+}
+for i in outputIntDic.sorted(by: { $0.value < $1.value }) {
+    outputArray.append(i.key)
+}
+
 print("2.  \(outputArray)\n")
 
 
