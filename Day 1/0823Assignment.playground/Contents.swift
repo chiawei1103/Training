@@ -35,7 +35,7 @@ Type Inference means that the compiler can infer what type of the variable is wh
 
 /// 5. What is Optionals
 /*
- When a variable is declared as a question mark behind its type, that means the variable can be nil.
+ When a variable is declared as a question mark behind its type, that means the variable can be null.
  */
 
 /// 6. How to do optional binding
