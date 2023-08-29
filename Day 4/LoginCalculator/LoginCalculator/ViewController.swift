@@ -1,14 +1,15 @@
 //
 //  ViewController.swift
-//  Calculator
+//  LoginCalculator
 //
-//  Created by Consultant on 8/24/23.
+//  Created by Consultant on 8/28/23.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
     
+    var userName: String?
     enum operatorType {
         case plus
         case minus
@@ -86,7 +87,7 @@ class ViewController: UIViewController {
         buttonDivide.isSelected = true
         buttonIsSelected(button: buttonDivide, operatorType: .divide)
         if let currentSubTotal = subTotal {
-            subTotal = currentSubTotal /  Int(outputLabel.text ?? "0")! 
+            subTotal = currentSubTotal /  Int(outputLabel.text ?? "0")!
          } else {
             subTotal = Int(outputLabel.text ?? "0")!
          }
@@ -129,14 +130,14 @@ class ViewController: UIViewController {
     }
     @IBAction func button5Action(_ sender: Any) {
         enter(inputValue: "5")
-        buttonPlus.isSelected = false
-        buttonMinus.isSelected = false
-        buttonDivide.isSelected = false
-        buttonMultiply.isSelected = false
-        buttonIsSelected(button: buttonPlus, operatorType: .plus)
-        buttonIsSelected(button: buttonMinus, operatorType: .minus)
-        buttonIsSelected(button: buttonDivide, operatorType: .divide)
-        buttonIsSelected(button: buttonMultiply, operatorType: .multiply)
+//        buttonPlus.isSelected = false
+//        buttonMinus.isSelected = false
+//        buttonDivide.isSelected = false
+//        buttonMultiply.isSelected = false
+//        buttonIsSelected(button: buttonPlus, operatorType: .plus)
+//        buttonIsSelected(button: buttonMinus, operatorType: .minus)
+//        buttonIsSelected(button: buttonDivide, operatorType: .divide)
+//        buttonIsSelected(button: buttonMultiply, operatorType: .multiply)
     }
     @IBAction func button6Action(_ sender: Any) {
         enter(inputValue: "6")
@@ -158,7 +159,15 @@ class ViewController: UIViewController {
     }
     
     func enter(inputValue: String) {
-//        buttonPlus.isSelected = false
+        buttonPlus.isSelected = false
+        buttonMinus.isSelected = false
+        buttonDivide.isSelected = false
+        buttonMultiply.isSelected = false
+        buttonIsSelected(button: buttonPlus, operatorType: .plus)
+        buttonIsSelected(button: buttonMinus, operatorType: .minus)
+        buttonIsSelected(button: buttonDivide, operatorType: .divide)
+        buttonIsSelected(button: buttonMultiply, operatorType: .multiply)
+        
         if firstValue {
             outputLabel.text = inputValue
         } else {
@@ -177,6 +186,7 @@ class ViewController: UIViewController {
             button.setImage(image, for: .normal)
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
