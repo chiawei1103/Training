@@ -17,6 +17,10 @@ class StudentCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        avatar.layer.cornerRadius = avatar.frame.size.width / 2
+        avatar.clipsToBounds = true
+        avatar.layer.borderWidth = 3
+        avatar.layer.borderColor = UIColor.white.cgColor
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

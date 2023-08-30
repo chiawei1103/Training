@@ -74,7 +74,7 @@ Type Inference means that the compiler can infer what type of the variable is wh
 
 /// 11. Diff b/w struct and class
 /*
-The obvious differenc between them is when we create an instance of a class and copy that class. Change one, and the copy would change too. However, when we create an instance of struct and copy the struct . Change one, and the copy won't change.
+The obvious differenc between them is when we create an instance of a class and copy that class. Change one, and the copy would change too. However, when we create an instance of struct and copy the struct. Change one, and the copy won't change.
  That is because class uses heap memory and struct uses stack memory.
  */
 

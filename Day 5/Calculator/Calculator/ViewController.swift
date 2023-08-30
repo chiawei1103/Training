@@ -26,21 +26,38 @@ class ViewController: UIViewController {
     @IBOutlet weak var buttonMultiply: UIButton!
     @IBOutlet weak var buttonDivide: UIButton!
     
-    @IBAction func buttonEqualAction(_ sender: Any) {
-
-        var result: Double?
+    func calaculate(lastOperator: operatorType?) -> Double? {
         if let finalOperator = lastOperator {
             switch finalOperator {
             case .plus:
-                result = subTotal! + (Double(outputLabel.text ?? "0") ?? 0)
+                return subTotal! + (Double(outputLabel.text ?? "0") ?? 0)
             case .minus:
-                result = subTotal! - (Double(outputLabel.text ?? "0") ?? 0)
+                return subTotal! - (Double(outputLabel.text ?? "0") ?? 0)
             case .multiply:
-                result = subTotal! * (Double(outputLabel.text ?? "0") ?? 0)
+                return subTotal! * (Double(outputLabel.text ?? "0") ?? 0)
             case .divide:
-                result = subTotal! / (Double(outputLabel.text ?? "0") ?? 0)
+                return subTotal! / (Double(outputLabel.text ?? "0") ?? 0)
             }
+        } else {
+            return 0
         }
+    }
+    
+    @IBAction func buttonEqualAction(_ sender: Any) {
+
+        var result: Double? = calaculate(lastOperator: lastOperator)
+//        if let finalOperator = lastOperator {
+//            switch finalOperator {
+//            case .plus:
+//                result = subTotal! + (Double(outputLabel.text ?? "0") ?? 0)
+//            case .minus:
+//                result = subTotal! - (Double(outputLabel.text ?? "0") ?? 0)
+//            case .multiply:
+//                result = subTotal! * (Double(outputLabel.text ?? "0") ?? 0)
+//            case .divide:
+//                result = subTotal! / (Double(outputLabel.text ?? "0") ?? 0)
+//            }
+//        }
         
         outputLabel.text = "\(result!)"
         subTotal = nil
@@ -48,7 +65,14 @@ class ViewController: UIViewController {
     }
     @IBAction func buttonPlusAction(_ sender: Any) {
         buttonPlus.isSelected = true
+        buttonMinus.isSelected = false
+        buttonDivide.isSelected = false
+        buttonMultiply.isSelected = false
+        buttonIsSelected(button: buttonDivide, operatorType: .divide)
         buttonIsSelected(button: buttonPlus, operatorType: .plus)
+        buttonIsSelected(button: buttonMinus, operatorType: .minus)
+        buttonIsSelected(button: buttonMultiply, operatorType: .multiply)
+        
         if !firstValue {
             if let currentSubTotal = subTotal {
                 subTotal = currentSubTotal +  Double(outputLabel.text ?? "0")!
@@ -65,7 +89,13 @@ class ViewController: UIViewController {
     }
     @IBAction func buttonMinusAction(_ sender: Any) {
         buttonMinus.isSelected = true
+        buttonPlus.isSelected = false
+        buttonDivide.isSelected = false
+        buttonMultiply.isSelected = false
+        buttonIsSelected(button: buttonDivide, operatorType: .divide)
+        buttonIsSelected(button: buttonPlus, operatorType: .plus)
         buttonIsSelected(button: buttonMinus, operatorType: .minus)
+        buttonIsSelected(button: buttonMultiply, operatorType: .multiply)
         
         if !firstValue {
             if let currentSubTotal = subTotal {
@@ -82,6 +112,12 @@ class ViewController: UIViewController {
     }
     @IBAction func buttonMultiplyAction(_ sender: Any) {
         buttonMultiply.isSelected = true
+        buttonPlus.isSelected = false
+        buttonMinus.isSelected = false
+        buttonDivide.isSelected = false
+        buttonIsSelected(button: buttonDivide, operatorType: .divide)
+        buttonIsSelected(button: buttonPlus, operatorType: .plus)
+        buttonIsSelected(button: buttonMinus, operatorType: .minus)
         buttonIsSelected(button: buttonMultiply, operatorType: .multiply)
 
         if !firstValue {
@@ -99,8 +135,14 @@ class ViewController: UIViewController {
     }
     @IBAction func buttonDivideAction(_ sender: Any) {
         buttonDivide.isSelected = true
+        buttonPlus.isSelected = false
+        buttonMinus.isSelected = false
+        buttonMultiply.isSelected = false
         buttonIsSelected(button: buttonDivide, operatorType: .divide)
-
+        buttonIsSelected(button: buttonPlus, operatorType: .plus)
+        buttonIsSelected(button: buttonMinus, operatorType: .minus)
+        buttonIsSelected(button: buttonMultiply, operatorType: .multiply)
+        
         if !firstValue {
             if let currentSubTotal = subTotal {
                 subTotal = currentSubTotal /  Double(outputLabel.text ?? "0")!
@@ -211,6 +253,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
     }
 
 
