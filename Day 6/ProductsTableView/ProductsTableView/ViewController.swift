@@ -57,21 +57,29 @@ class ViewController: UIViewController, UITableViewDataSource {
         return tableCell ?? UITableViewCell()
     }
     
-    @MainActor
+//    @MainActor
     func getUIImage(url: String) -> UIImage {
         var image: UIImage?
         if let url = URL(string: url) {
+//            DispatchQueue.global().async {
+//                do {
+//                    let data = try Data(contentsOf: url)
+//                    if let uiimage = UIImage(data: data) {
+//                        DispatchQueue.main.async {
+//                            image = uiimage
+//                        }
+//                    }
+//                } catch {
+//                    print(error.localizedDescription)
+//                }
+//            }
+//            return image ?? UIImage()
             
             let imageData: Data?
             do {
                 imageData = try Data(contentsOf: url)
-                let imageView = UIImageView(frame: CGRect(x:0, y:0, width:100, height:100))
-                imageView.center = self.view.center
-                
                 if let data = imageData {
                     image = UIImage(data: data)
-                    imageView.image = image
-                    imageView.contentMode = UIView.ContentMode.scaleAspectFit
                     return image ?? UIImage()
                 }
             } catch {
@@ -80,6 +88,8 @@ class ViewController: UIViewController, UITableViewDataSource {
         }
         return image ?? UIImage()
     }
+    
+    
     
     func readLocalFile() {
         guard let url = Bundle.main.url(forResource: "Products", withExtension: "json") else { return }
