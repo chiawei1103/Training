@@ -8,6 +8,43 @@ import UIKit
 
 //   https://dummyjson.com/products
 
+// Create a class for which you should be able to create only 3 objects ,if more 3 object is created than throw an error
+
+enum StudentError: Error {
+    case tooManyStudents
+}
+
+class Student {
+    static var count = 0
+    
+    let name: String
+    let gender: String
+
+    init(name: String, gender: String) throws {
+        self.name = name
+        self.gender = gender
+        Student.count += 1
+        
+        if Student.count > 3 {
+            throw StudentError.tooManyStudents
+        }
+    }
+}
+
+do {
+    let s1 = try Student(name: "s1", gender: "male")
+    print(s1.name)
+    let s2 = try Student(name: "s2", gender: "male")
+    print(s2.name)
+    let s3 = try Student(name: "s3", gender: "male")
+    print(s3.name)
+    let s4 = try Student(name: "s4", gender: "male")
+    print(s4.name)
+} catch {
+    print(error)
+}
+
+
 
 
 // 1. what is app life cycle methods

@@ -54,7 +54,6 @@ class ViewController: UIViewController, UITableViewDataSource {
         tableCell?.categoryLabel.text = category
         tableCell?.thumbnailImage.image = getUIImage(url: thumbnail)
         
-        
         return tableCell ?? UITableViewCell()
     }
     
