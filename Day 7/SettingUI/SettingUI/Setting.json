@@ -1,0 +1,33 @@
+{
+  "accessiblity": [
+    {"VISION": [
+      {"label": "VoiceOver","icon": "hearingdevice.ear"},
+      {"label": "Zoom","icon": "dot.arrowtriangles.up.right.down.left.circle"},
+      {"label": "Display & Text Size","icon": "textformat.size"},
+      {"label": "Motion", "icon": "cursorarrow.motionlines.click"},
+      {"label": "Spoken", "icon": "rectangle.3.group.bubble.left"},
+      {"label": "Audio Decriptions", "icon": "quote.bubble"}]},
+    {"PHYSICAL AND MOTOR": [
+      {"label": "Touch", "icon": "hand.tap"},
+      {"label": "Face ID & Attention", "icon": "faceid"},
+      {"label": "Switch Control", "icon": "square.grid.2x2"},
+      {"label": "Voice Control", "icon": "dot.arrowtriangles.up.right.down.left.circle"},
+      {"label": "Side Button", "icon": "hand.point.up.braille.fill"},
+      {"label": "Control Nearby Devices", "icon": "brakesignal"},
+      {"label": "Apple TV Remote", "icon": "appletvremote.gen4"},
+      {"label": "Keyboards", "icon": "keyboard"}]},
+    {"HEARING": [
+      {"label": "Hearing Devices", "icon": "ear"},
+      {"label": "Sound Recognition", "icon": "waveform.and.magnifyingglass"},
+      {"label": "RTT/TTY", "icon": "teletype"},
+      {"label": "Audio/Visual", "icon": "keyboard.badge.eye"},
+      {"label": "Subtitles & Captioning", "icon": "captions.bubble"},
+      {"label": "Live Captions(Beta)", "icon": "waveform.circle"}]},
+    {"GENERAL": [
+        {"label": "Guided Access", "icon": "lock.square"},
+        {"label": "Siri", "icon": "mouth"},
+        {"label": "Accessibility Shortcut", "icon": "figure.arms.open"},
+        {"label": "Per-App Setting", "icon": "app.badge.checkmark"},
+        {"label": "Hello Wei", "icon": "figure.snowboarding"}]}
+  ]
+}

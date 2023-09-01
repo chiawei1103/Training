@@ -57,22 +57,15 @@ class ViewController: UIViewController, UITableViewDataSource {
         return tableCell ?? UITableViewCell()
     }
     
-//    @MainActor
+    @MainActor
     func getUIImage(url: String) -> UIImage {
         var image: UIImage?
         if let url = URL(string: url) {
-//            DispatchQueue.global().async {
-//                do {
-//                    let data = try Data(contentsOf: url)
-//                    if let uiimage = UIImage(data: data) {
-//                        DispatchQueue.main.async {
-//                            image = uiimage
-//                        }
-//                    }
-//                } catch {
-//                    print(error.localizedDescription)
-//                }
-//            }
+//            let imageView = UIImageView()
+//            imageView.load(url: url)
+//            image = imageView.image
+//            print(imageView.image?.size)
+//
 //            return image ?? UIImage()
             
             let imageData: Data?
@@ -108,5 +101,19 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
 
 
+}
+
+extension UIImageView {
+    func load(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
+    }
 }
 
