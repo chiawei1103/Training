@@ -20,9 +20,17 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fTB-OL-EFw">
                                 <rect key="frame" x="10" y="59" width="373" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Enter to search" id="LJN-6a-Djy">
+                                    <rect key="frame" x="0.0" y="0.0" width="373" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="BYZ-38-t0r" id="LDl-0d-k9D"/>
+                                    </connections>
+                                </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="countryTableViewCell" rowHeight="200" id="2Xd-KY-Zzh" customClass="CountryTableViewCell" customModule="CountryList" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="373" height="200"/>
+                                        <rect key="frame" x="0.0" y="94" width="373" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Xd-KY-Zzh" id="lFP-P7-i97">
                                             <rect key="frame" x="0.0" y="0.0" width="373" height="200"/>
@@ -192,7 +200,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableVIew" destination="fTB-OL-EFw" id="4IU-kF-n4y"/>
+                        <outlet property="searchBar" destination="LJN-6a-Djy" id="gML-Em-uZo"/>
+                        <outlet property="tableView" destination="fTB-OL-EFw" id="YAB-2f-Hur"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

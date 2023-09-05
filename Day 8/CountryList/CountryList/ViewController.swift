@@ -7,26 +7,49 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelegate, UITableViewDelegate {
     
     
-    @IBOutlet weak var tableVIew: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var tableView: UITableView!
     
     var countries: [Country]?
+    var searchData: [Country]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         getCountry()
-        tableVIew.dataSource = self
+        tableView.dataSource = self
+        tableView.delegate = self
+        searchBar.delegate = self
+
+        searchData = countries
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
+        searchData = countries
+        searchBar.endEditing(true)
+        tableView.reloadData()
+    }
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchData = searchText.isEmpty ? countries : countries?.filter{ (item: Country) in
+            return item.name.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
+        }
+        tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return countries?.count ?? 0
+//        return countries?.count ?? 0
+        return searchData?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "countryTableViewCell", for: indexPath) as? CountryTableViewCell
-        guard let countries = countries else { return UITableViewCell() }
+//        guard let countries = countries else { return UITableViewCell() }
+        guard let countries = searchData else { return UITableViewCell() }
         
         let name = countries[indexPath.row].name
         let code = countries[indexPath.row].code
@@ -35,7 +58,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         let currencySymbol = countries[indexPath.row].currency.symbol
         let language = countries[indexPath.row].language.name
         let region = countries[indexPath.row].region
-//        let flag = countries[indexPath.row.flag
+//        let flagUrl = countries[indexPath.row].flag
         
         cell?.countryNameLabel.text = name
         cell?.capitalLabel.text = capital
@@ -45,6 +68,12 @@ class ViewController: UIViewController, UITableViewDataSource {
         cell?.languageLabel.text = language
         cell?.regionLabel.text = region
         cell?.flagImage.image = UIImage(systemName: "flag")
+        
+//        print("flag: \(URL(string: flagUrl))")
+//        let image = UIImageView()
+//        image.load(url: URL(string: flagUrl)!)
+//        print("image: \(image.image?.size)")
+//        cell?.flagImage.image = image.image
         
         return cell ?? UITableViewCell()
     }
@@ -64,17 +93,34 @@ class ViewController: UIViewController, UITableViewDataSource {
             do {
                 self.countries = try decoder.decode([Country].self, from: data)
                 DispatchQueue.main.async {
-                    self.tableVIew.reloadData()
+                    self.searchData = self.countries
+                    self.tableView.reloadData()
+                    
                 }
-                
+
             } catch {
                 print(error)
             }
         }
         dataTask.resume()
-        
     }
+}
 
-
+extension UIImageView {
+    func load(url: URL) {
+        print("url: \(url)")
+        DispatchQueue.global().async { [weak self] in
+            do {
+                let data = try Data(contentsOf: url)
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            } catch {
+                print(error)
+            }
+        }
+    }
 }
 
