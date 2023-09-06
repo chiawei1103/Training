@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelegate, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelegate {
     
     
     @IBOutlet weak var errorLabel: UILabel!
@@ -26,7 +26,6 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelega
             self.searchData = self.countries
             DispatchQueue.main.async {
                 self.tableView.reloadData()
-//                print("Error: \(error?.localizedDescription)")
                 if let error = error {
                     self.errorLabel.frame.size = CGSize(width: 350, height: 100)
                     self.errorLabel.text = "Warning: \(error.localizedDescription)"
@@ -36,7 +35,6 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelega
             
         }
         tableView.dataSource = self
-        tableView.delegate = self
         searchBar.delegate = self
 
         searchData = countries

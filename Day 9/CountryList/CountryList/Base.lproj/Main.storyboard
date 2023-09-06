@@ -17,19 +17,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <searchBar contentMode="redraw" placeholder="Enter to search" translatesAutoresizingMaskIntoConstraints="NO" id="PxI-Xw-NHO">
+                                <rect key="frame" x="0.0" y="103" width="393" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8gY-kn-RPK"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Wjz-ZI-Fxb"/>
+                                </connections>
+                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fTB-OL-EFw">
-                                <rect key="frame" x="10" y="103" width="373" height="666"/>
+                                <rect key="frame" x="0.0" y="153" width="393" height="616"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Enter to search" id="LJN-6a-Djy">
-                                    <rect key="frame" x="0.0" y="0.0" width="373" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                    <connections>
-                                        <outlet property="delegate" destination="BYZ-38-t0r" id="LDl-0d-k9D"/>
-                                    </connections>
-                                </searchBar>
                                 <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LIS-Fe-SYz">
-                                    <rect key="frame" x="0.0" y="866" width="373" height="0.0"/>
+                                    <rect key="frame" x="0.0" y="278" width="393" height="0.0"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                     <color key="textColor" systemColor="systemRedColor"/>
@@ -37,14 +39,14 @@
                                 </label>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="countryTableViewCell" rowHeight="200" id="2Xd-KY-Zzh" customClass="CountryTableViewCell" customModule="CountryList" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="94" width="373" height="200"/>
+                                        <rect key="frame" x="0.0" y="50" width="393" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Xd-KY-Zzh" id="lFP-P7-i97">
-                                            <rect key="frame" x="0.0" y="0.0" width="373" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="6Pc-YW-IyF">
-                                                    <rect key="frame" x="0.0" y="5" width="373" height="190"/>
+                                                    <rect key="frame" x="10" y="5" width="373" height="190"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zOa-z3-E78">
                                                             <rect key="frame" x="0.0" y="0.0" width="373" height="50"/>
@@ -117,7 +119,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90H-VY-wcN">
-                                                                            <rect key="frame" x="61.999999999999993" y="0.0" width="124.33333333333331" height="32"/>
+                                                                            <rect key="frame" x="62.000000000000021" y="0.0" width="124.33333333333334" height="32"/>
                                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -179,8 +181,8 @@
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="6Pc-YW-IyF" secondAttribute="bottom" constant="5" id="6P5-n7-M31"/>
                                                 <constraint firstItem="6Pc-YW-IyF" firstAttribute="top" secondItem="lFP-P7-i97" secondAttribute="top" constant="5" id="Zna-9h-Vz2"/>
-                                                <constraint firstAttribute="trailing" secondItem="6Pc-YW-IyF" secondAttribute="trailing" id="f7J-GK-9Rg"/>
-                                                <constraint firstItem="6Pc-YW-IyF" firstAttribute="leading" secondItem="lFP-P7-i97" secondAttribute="leading" id="upb-39-v0O"/>
+                                                <constraint firstAttribute="trailing" secondItem="6Pc-YW-IyF" secondAttribute="trailing" constant="10" id="f7J-GK-9Rg"/>
+                                                <constraint firstItem="6Pc-YW-IyF" firstAttribute="leading" secondItem="lFP-P7-i97" secondAttribute="leading" constant="10" id="upb-39-v0O"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -200,16 +202,19 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fTB-OL-EFw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Q1J-Ci-hCK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fTB-OL-EFw" secondAttribute="trailing" constant="10" id="SkH-kX-El4"/>
+                            <constraint firstItem="PxI-Xw-NHO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="73q-qz-ed7"/>
+                            <constraint firstItem="fTB-OL-EFw" firstAttribute="top" secondItem="PxI-Xw-NHO" secondAttribute="bottom" id="IPf-an-Iaa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fTB-OL-EFw" secondAttribute="trailing" id="SkH-kX-El4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fTB-OL-EFw" secondAttribute="bottom" id="Yyy-Sz-dRQ"/>
-                            <constraint firstItem="fTB-OL-EFw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="tFC-LB-eZZ"/>
+                            <constraint firstItem="PxI-Xw-NHO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="b8h-08-QFC"/>
+                            <constraint firstItem="PxI-Xw-NHO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pFk-aC-8Pq"/>
+                            <constraint firstItem="fTB-OL-EFw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tFC-LB-eZZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Closure" id="nmO-C3-gaH"/>
                     <connections>
                         <outlet property="errorLabel" destination="LIS-Fe-SYz" id="Bbv-jL-O1y"/>
-                        <outlet property="searchBar" destination="LJN-6a-Djy" id="gML-Em-uZo"/>
+                        <outlet property="searchBar" destination="PxI-Xw-NHO" id="4zU-Tu-XG9"/>
                         <outlet property="tableView" destination="fTB-OL-EFw" id="YAB-2f-Hur"/>
                     </connections>
                 </viewController>
@@ -223,15 +228,17 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="WEW-4U-fBx" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9tO-sx-zQX">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.98431372549999996" green="0.91764705879999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.33333333329999998" green="0.14901960780000001" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                 <color key="value" red="0.33333333329999998" green="0.14901960780000001" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
-                                <color key="value" red="0.83137254900000002" green="0.83137254900000002" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBar>
@@ -248,7 +255,7 @@
         <scene sceneID="iKz-Ca-7yY">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="g2n-GM-3UX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Closure" image="bolt.ring.closed" catalog="system" id="DCq-m9-cqv"/>
+                    <tabBarItem key="tabBarItem" title="Closure" image="bolt.square" catalog="system" id="DCq-m9-cqv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5jG-vE-Xnx">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -276,7 +283,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bolt.ring.closed" catalog="system" width="128" height="123"/>
+        <image name="bolt.square" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

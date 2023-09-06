@@ -11,7 +11,7 @@ protocol NetworkManagerAction {
     func getData(countries: [Country]?, error: Error?)
 }
 
-class ProtocolViewController: UIViewController, UITableViewDataSource, UISearchBarDelegate, UITableViewDelegate, NetworkManagerAction {
+class ProtocolViewController: UIViewController, UITableViewDataSource, UISearchBarDelegate, NetworkManagerAction {
     
     var countries: [Country]?
     var searchData: [Country]?
@@ -25,7 +25,6 @@ class ProtocolViewController: UIViewController, UITableViewDataSource, UISearchB
         super.viewDidLoad()
 
         tableView.dataSource = self
-        tableView.delegate = self
         searchBar.delegate = self
         networkManagerProtocol.delegate = self
         networkManagerProtocol.getCountry()
