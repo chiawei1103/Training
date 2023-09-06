@@ -19,6 +19,7 @@
                                 <rect key="frame" x="10" y="103" width="373" height="715"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingTableCell" textLabel="En8-xX-jBQ" style="IBUITableViewCellStyleDefault" id="0Qz-AE-y5I">
                                         <rect key="frame" x="0.0" y="50" width="373" height="43.666667938232422"/>

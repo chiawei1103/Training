@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     var responseJSON: Accessiblity?
@@ -17,18 +17,34 @@ class ViewController: UIViewController, UITableViewDataSource {
         // Do any additional setup after loading the view.
         readLocalFile()
         tableView.dataSource = self
+        tableView.delegate = self
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        var key: String?
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = .black
+        let titleLabel = UILabel()
+        titleLabel.frame = CGRect(x: 0, y: 0, width: 300, height: 20)
+        titleLabel.textColor = .white
         if let accessibility = responseJSON?.accessiblity[section] {
             for section in accessibility {
-                key = section.key
+                titleLabel.text = section.key
             }
         }
-        return key
+        view.addSubview(titleLabel)
+        return view
     }
     
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        var key: String?
+//        if let accessibility = responseJSON?.accessiblity[section] {
+//            for section in accessibility {
+//                key = section.key
+//            }
+//        }
+//        return key
+//    }
+//
     func numberOfSections(in tableView: UITableView) -> Int {
         return responseJSON?.accessiblity.count ?? 0
     }

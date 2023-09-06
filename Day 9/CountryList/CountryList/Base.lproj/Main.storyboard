@@ -14,14 +14,16 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CountryList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" placeholder="Enter to search" translatesAutoresizingMaskIntoConstraints="NO" id="PxI-Xw-NHO">
                                 <rect key="frame" x="0.0" y="103" width="393" height="50"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.91764705879999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="8gY-kn-RPK"/>
                                 </constraints>
+                                <color key="barTintColor" red="0.98431372549999996" green="0.91764705879999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Wjz-ZI-Fxb"/>
@@ -29,7 +31,9 @@
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fTB-OL-EFw">
                                 <rect key="frame" x="0.0" y="153" width="393" height="616"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.91764705879999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" red="0.33333333329999998" green="0.14901960780000001" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LIS-Fe-SYz">
                                     <rect key="frame" x="0.0" y="278" width="393" height="0.0"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -61,7 +65,7 @@
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CountryName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04V-mO-akO">
                                                                     <rect key="frame" x="50" y="0.0" width="323" height="50"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
-                                                                    <nil key="textColor"/>
+                                                                    <color key="textColor" red="0.33333333329999998" green="0.14901960780000001" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -119,7 +123,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90H-VY-wcN">
-                                                                            <rect key="frame" x="62.000000000000021" y="0.0" width="124.33333333333334" height="32"/>
+                                                                            <rect key="frame" x="62.000000000000021" y="0.0" width="124.33333333333331" height="32"/>
                                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -185,6 +189,7 @@
                                                 <constraint firstItem="6Pc-YW-IyF" firstAttribute="leading" secondItem="lFP-P7-i97" secondAttribute="leading" constant="10" id="upb-39-v0O"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.98431372549999996" green="0.91764705879999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="capitalLabel" destination="ton-qW-uNF" id="dvB-a3-hqH"/>
                                             <outlet property="codeLabel" destination="Ttt-W7-x9m" id="9Hp-vd-B1P"/>
@@ -200,7 +205,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.98431372549999996" green="0.91764705879999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="PxI-Xw-NHO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="73q-qz-ed7"/>
                             <constraint firstItem="fTB-OL-EFw" firstAttribute="top" secondItem="PxI-Xw-NHO" secondAttribute="bottom" id="IPf-an-Iaa"/>
@@ -227,11 +232,11 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="WEW-4U-fBx" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9tO-sx-zQX">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="9tO-sx-zQX">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.98431372549999996" green="0.91764705879999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.33333333329999998" green="0.14901960780000001" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
@@ -260,6 +265,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5jG-vE-Xnx">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.33333333329999998" green="0.14901960780000001" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -284,9 +292,6 @@
     </scenes>
     <resources>
         <image name="bolt.square" catalog="system" width="128" height="114"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

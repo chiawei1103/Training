@@ -84,7 +84,7 @@ class ProtocolViewController: UIViewController, UITableViewDataSource, UISearchB
         cell?.currencySymbolLabel.text = currencySymbol
         cell?.languageLabel.text = language
         cell?.regionLabel.text = region
-        cell?.flagImage.image = UIImage(systemName: "flag")
+        cell?.flagImage.image = UIImage(systemName: "flag")?.withTintColor(.brown, renderingMode: .alwaysOriginal)
         
 //        print("flag: \(URL(string: flagUrl))")
 //        let image = UIImageView()
