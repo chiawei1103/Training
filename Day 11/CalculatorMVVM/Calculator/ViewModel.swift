@@ -20,16 +20,16 @@ class ViewModel {
     var lastOperator: OperatorType?
     
     func calaculate(lastOperator: OperatorType?, outputLabel: String) -> Double? {
-        if let finalOperator = lastOperator {
+        if let finalOperator = lastOperator, let subTotal = subTotal {
             switch finalOperator {
             case .plus:
-                return subTotal! + (Double(outputLabel) ?? 0)
+                return subTotal + (Double(outputLabel) ?? 0)
             case .minus:
-                return subTotal! - (Double(outputLabel) ?? 0)
+                return subTotal - (Double(outputLabel) ?? 0)
             case .multiply:
-                return subTotal! * (Double(outputLabel) ?? 0)
+                return subTotal * (Double(outputLabel) ?? 0)
             case .divide:
-                return subTotal! / (Double(outputLabel) ?? 0)
+                return subTotal / (Double(outputLabel) ?? 0)
             }
         } else {
             return 0
