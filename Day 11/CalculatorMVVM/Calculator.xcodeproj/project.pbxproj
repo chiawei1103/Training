@@ -38,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		02479E672AAB8BD400938D93 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		02479EF62AAFA05E00938D93 /* Calculator.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Calculator.xctestplan; sourceTree = "<group>"; };
 		02DE76A62A97E1A900D00C57 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02DE76A92A97E1A900D00C57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02DE76AB2A97E1A900D00C57 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +82,7 @@
 		02DE769D2A97E1A900D00C57 = {
 			isa = PBXGroup;
 			children = (
+				02479EF62AAFA05E00938D93 /* Calculator.xctestplan */,
 				02DE76A82A97E1A900D00C57 /* Calculator */,
 				02DE76BF2A97E1AB00D00C57 /* CalculatorTests */,
 				02DE76C92A97E1AB00D00C57 /* CalculatorUITests */,
@@ -104,11 +106,11 @@
 				02DE76A92A97E1A900D00C57 /* AppDelegate.swift */,
 				02DE76AB2A97E1A900D00C57 /* SceneDelegate.swift */,
 				02DE76AD2A97E1A900D00C57 /* ViewController.swift */,
+				02479E672AAB8BD400938D93 /* ViewModel.swift */,
 				02DE76AF2A97E1A900D00C57 /* Main.storyboard */,
 				02DE76B22A97E1AB00D00C57 /* Assets.xcassets */,
 				02DE76B42A97E1AB00D00C57 /* LaunchScreen.storyboard */,
 				02DE76B72A97E1AB00D00C57 /* Info.plist */,
-				02479E672AAB8BD400938D93 /* ViewModel.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -500,7 +502,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.CalculatorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -519,7 +521,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.CalculatorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

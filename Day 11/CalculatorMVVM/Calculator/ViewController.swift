@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var buttonDivide: UIButton!
     
     @IBAction func buttonEqualAction(_ sender: Any) {
-        var result: Double? = viewModel.calaculate(lastOperator: viewModel.lastOperator, outputLabel: outputLabel.text ?? "0")
+        let result: Double? = viewModel.calaculate(lastOperator: viewModel.lastOperator, outputLabel: outputLabel.text ?? "0")
         
         outputLabel.text = "\(result!)"
         viewModel.subTotal = nil

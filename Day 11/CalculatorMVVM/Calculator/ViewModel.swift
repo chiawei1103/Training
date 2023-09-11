@@ -29,7 +29,8 @@ class ViewModel {
             case .multiply:
                 return subTotal * (Double(outputLabel) ?? 0)
             case .divide:
-                return subTotal / (Double(outputLabel) ?? 0)
+                guard let outputLabel = Double(outputLabel) else { return 0 }
+                return subTotal / outputLabel
             }
         } else {
             return 0

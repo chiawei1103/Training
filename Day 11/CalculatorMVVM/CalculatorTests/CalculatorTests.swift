@@ -46,48 +46,69 @@ final class CalculatorTests: XCTestCase {
     
     func testCalculate() throws {
         
+        
         // plus
         var lastOperator: OperatorType = .plus
-        let outLabel = "4"
+        let outputLabel = "4"
+        let wrongOutputLabel = "abc"
         viewModel.subTotal = 6
         
-        var actualOutput = viewModel.calaculate(lastOperator: lastOperator, outputLabel: outLabel)
+        var actualOutput = viewModel.calaculate(lastOperator: lastOperator, outputLabel: outputLabel)
         var expectOutput = 10.0
+        XCTAssertEqual(expectOutput, actualOutput)
+        
+        /// outputLabel
+        actualOutput = viewModel.calaculate(lastOperator: lastOperator, outputLabel: wrongOutputLabel)
+        expectOutput = 6
         XCTAssertEqual(expectOutput, actualOutput)
         
         // minus
         lastOperator = .minus
         viewModel.subTotal = 2
         
-        actualOutput = viewModel.calaculate(lastOperator: lastOperator, outputLabel: outLabel)
+        actualOutput = viewModel.calaculate(lastOperator: lastOperator, outputLabel: outputLabel)
         
         expectOutput = -2.0
+        XCTAssertEqual(expectOutput, actualOutput)
+        
+        /// outputLabel
+        actualOutput = viewModel.calaculate(lastOperator: lastOperator, outputLabel: wrongOutputLabel)
+        expectOutput = 2
         XCTAssertEqual(expectOutput, actualOutput)
         
         // multiply
         lastOperator = .multiply
         viewModel.subTotal = 2
         
-        actualOutput = viewModel.calaculate(lastOperator: lastOperator, outputLabel: outLabel)
+        actualOutput = viewModel.calaculate(lastOperator: lastOperator, outputLabel: outputLabel)
         
         expectOutput = 8
+        XCTAssertEqual(expectOutput, actualOutput)
+        
+        /// outputLabel
+        actualOutput = viewModel.calaculate(lastOperator: lastOperator, outputLabel: wrongOutputLabel)
+        expectOutput = 0
         XCTAssertEqual(expectOutput, actualOutput)
         
         // divide
         lastOperator = .divide
         viewModel.subTotal = 2
         
-        actualOutput = viewModel.calaculate(lastOperator: lastOperator, outputLabel: outLabel)
+        actualOutput = viewModel.calaculate(lastOperator: lastOperator, outputLabel: outputLabel)
         
         expectOutput = 0.5
         XCTAssertEqual(expectOutput, actualOutput)
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+        
+        /// outputLabel
+        actualOutput = viewModel.calaculate(lastOperator: lastOperator, outputLabel: wrongOutputLabel)
+        expectOutput = 0
+        XCTAssertEqual(expectOutput, actualOutput)
+        
+        // no Operator
+        actualOutput = viewModel.calaculate(lastOperator: .none, outputLabel: outputLabel)
+        expectOutput = 0
+        XCTAssertEqual(expectOutput, actualOutput)
+        
     }
 
 }
