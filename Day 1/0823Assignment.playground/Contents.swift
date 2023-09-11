@@ -39,20 +39,20 @@ Type Inference means that the compiler can infer what type of the variable is wh
  */
 
 /// 6. How to do optional binding
-/*
- There are two ways to do the optional binding.
- One, "if let". Two, "guard let"
- The syntax for the first one would be:
- if let newVariableName = optionalVariableName { }
+
+// There are two ways to do the optional binding.
+// One, "if let". Two, "guard let"
+// The syntax for the first one would be:
+// if let newVariableName = optionalVariableName { }
+//
+// The syntax for the second one would be:
+// guard let newVariableName = optionalVariableName else { return }
  
- The syntax fot the second one would be:
- guard let newVariableName = optionalVariableName else { return }
- */
 
 /// 7. Diff b/w if let and guard let
-/*
- The biggest and obvious difference between them is that in guard let, we can process the "else" situation and return different value. In if let, we do need to return statement, the compiler would just not execute the function.
- */
+
+// The biggest and obvious difference between them is that in guard let, we can process the "else" situation and return different value. In if let, we do need to return statement, the compiler would just not execute the function.
+ 
 
 /// 8. What is nil coalescing operator
 /*
@@ -61,10 +61,10 @@ Type Inference means that the compiler can infer what type of the variable is wh
  */
 
 /// 9. What is protocol
-/*
+
  It is a blueprint of methods or properties that can be applied by classes ot other types.
  It is just a interface, the methods or properties definition, not their body.
- */
+ 
 
 /// 10. What is class
 /*

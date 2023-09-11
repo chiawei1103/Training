@@ -13,15 +13,18 @@ class SchoolDetailViewController: UIViewController {
 
 
     
+    @IBOutlet weak var writingCircularProgress: CircularProgressView!
+    @IBOutlet weak var mathCircularProgress: CircularProgressView!
+    @IBOutlet weak var readingCircularProgress: CircularProgressView!
     @IBOutlet weak var schoolDetailStack: UIStackView!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var websiteLabel: UILabel!
     @IBOutlet weak var totalStudentsLabel: UILabel!
     @IBOutlet weak var schoolDescLabel: UILabel!
-    @IBOutlet weak var writingScoreLabel: UILabel!
-    @IBOutlet weak var mathScoreLabel: UILabel!
-    @IBOutlet weak var readingScoreLabel: UILabel!
+//    @IBOutlet weak var writingScoreLabel: UILabel!
+//    @IBOutlet weak var mathScoreLabel: UILabel!
+//    @IBOutlet weak var readingScoreLabel: UILabel!
     @IBOutlet weak var schoolNameLabel: UILabel!
     
     var school: HighSchool?
@@ -33,9 +36,22 @@ class SchoolDetailViewController: UIViewController {
         
         schoolNameLabel.text = school?.schoolName
         
-        readingScoreLabel.text = school?.satCriticalReadingAvgScore
-        mathScoreLabel.text = school?.satMathAvgScore
-        writingScoreLabel.text = school?.satWritingAvgScore
+//        readingScoreLabel.text = school?.satCriticalReadingAvgScore
+//        mathScoreLabel.text = school?.satMathAvgScore
+//        writingScoreLabel.text = school?.satWritingAvgScore
+        
+        let readingScore = Int(school?.satCriticalReadingAvgScore ?? "0") ?? 0
+        let mathScore = Int(school?.satMathAvgScore ?? "0") ?? 0
+        let writingScore = Int(school?.satWritingAvgScore ?? "0") ?? 0
+        
+        readingCircularProgress.setprogress(Double(readingScore / 800),  "\(readingScore)")
+        readingCircularProgress.animate(0.2)
+        
+        mathCircularProgress.setprogress(Double(mathScore / 800),  "\(mathScore)")
+        mathCircularProgress.animate(0.2)
+        
+        writingCircularProgress.setprogress(Double(writingScore / 800),  "\(writingScore)")
+        writingCircularProgress.animate(0.2)
         
         schoolDetailViewModel.getSchoolDetail(schoolID: school?.dbn) { result in
             

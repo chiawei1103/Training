@@ -22,7 +22,7 @@ class SchoolDetailViewModel {
                     return
                 }
                 self.schoolDetail = schoolDetailList.first(where: { $0.dbn == schoolID })
-                print("schoolDetail: \(self.schoolDetail)")
+//                print("schoolDetail: \(self.schoolDetail)")
                 completionHandler(.success(self.schoolDetail))
             case .failure(_):
                 completionHandler(.failure(.urlSessionFailed))

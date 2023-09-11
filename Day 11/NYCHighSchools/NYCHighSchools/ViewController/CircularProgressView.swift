@@ -86,15 +86,22 @@ class CircularProgressView: UIView {
         self.addSubview(centerText)
     }
     
-    
-    func setprogress(_ progress: Double = 0.5, _ color: UIColor = UIColor.blue, _ text: String = "", _ text2: String = ""){
+    func setprogress(_ progress: Double = 0.5, _ text: String = ""){
         self.progress =  progress
-        self.color = color
         self.title = text
-        self.subtitle = "\n" + text2
         createLabels()
         createCircularPath()
     }
+
+    
+//    func setprogress(_ progress: Double = 0.5, _ color: UIColor = UIColor.blue, _ text: String = "", _ text2: String = ""){
+//        self.progress =  progress
+//        self.color = color
+//        self.title = text
+//        self.subtitle = "\n" + text2
+//        createLabels()
+//        createCircularPath()
+//    }
     
     func animate(_ value: Double, duration: TimeInterval = 2 ) {
             let circularProgressAnimation = CABasicAnimation(keyPath: "strokeEnd")
