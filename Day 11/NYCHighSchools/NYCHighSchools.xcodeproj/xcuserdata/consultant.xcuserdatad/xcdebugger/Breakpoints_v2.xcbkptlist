@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "65134DE4-C581-4BBB-939F-4DA1924B0764"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "15860B58-574B-431C-8D80-FF5F0DF40B7A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NYCHighSchools/ViewModel/SchoolDetailViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "getSchoolDetail(schoolID:completionHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "15860B58-574B-431C-8D80-FF5F0DF40B7A - d369fef3bd540974"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;NYCHighSchools.HighSchoolDetail&gt;, NYCHighSchools.NetworkManagerError&gt;) -&gt; () in NYCHighSchools.SchoolDetailViewModel.getSchoolDetail(schoolID: Swift.Optional&lt;Swift.String&gt;, completionHandler: (Swift.Optional&lt;NYCHighSchools.NetworkManagerError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NYCHighSchools"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/consultant/Documents/NYCHighSchools/NYCHighSchools/ViewModel/SchoolDetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "526">
+               </Location>
+               <Location
+                  uuid = "15860B58-574B-431C-8D80-FF5F0DF40B7A - ebe4dd72b0181eea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (NYCHighSchools.HighSchoolDetail) -&gt; Swift.Bool in closure #1 (Swift.Result&lt;Swift.Array&lt;NYCHighSchools.HighSchoolDetail&gt;, NYCHighSchools.NetworkManagerError&gt;) -&gt; () in NYCHighSchools.SchoolDetailViewModel.getSchoolDetail(schoolID: Swift.Optional&lt;Swift.String&gt;, completionHandler: (Swift.Optional&lt;NYCHighSchools.NetworkManagerError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NYCHighSchools"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/consultant/Documents/NYCHighSchools/NYCHighSchools/ViewModel/SchoolDetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "50">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DD3C0EF0-F350-4805-BAE9-07ADD179FA97"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NYCHighSchools/ViewModel/SchoolDetailViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "getSchoolDetail(schoolID:completionHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DD3C0EF0-F350-4805-BAE9-07ADD179FA97 - d369fef3bd54095b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;NYCHighSchools.HighSchoolDetail&gt;, NYCHighSchools.NetworkManagerError&gt;) -&gt; () in NYCHighSchools.SchoolDetailViewModel.getSchoolDetail(schoolID: Swift.Optional&lt;Swift.String&gt;, completionHandler: (Swift.Optional&lt;NYCHighSchools.NetworkManagerError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NYCHighSchools"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/consultant/Documents/NYCHighSchools/NYCHighSchools/ViewModel/SchoolDetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "1750">
+               </Location>
+               <Location
+                  uuid = "DD3C0EF0-F350-4805-BAE9-07ADD179FA97 - 23a886c3eea741aa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;NYCHighSchools.HighSchoolDetail&gt;, NYCHighSchools.NetworkManagerError&gt;) -&gt; () in NYCHighSchools.SchoolDetailViewModel.getSchoolDetail(schoolID: Swift.Optional&lt;Swift.String&gt;, completionHandler: (Swift.Result&lt;Swift.Optional&lt;NYCHighSchools.HighSchoolDetail&gt;, NYCHighSchools.NetworkManagerError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NYCHighSchools"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/consultant/Documents/NYCHighSchools/NYCHighSchools/ViewModel/SchoolDetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "1947">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

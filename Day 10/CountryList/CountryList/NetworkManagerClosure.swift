@@ -19,7 +19,7 @@ extension NetworkError: LocalizedError {
         case .urlParseFailed:
             return NSLocalizedString("URL Parsing Failed", comment: "")
         case .urlSessionFailed:
-            return NSLocalizedString("URL Session Failed", comment: "")
+            return NSLocalizedString("URL Parsing Failed", comment: "")
         case .jsonDecoderFailed:
             return NSLocalizedString("JSON Decoder Failed", comment: "")
         }
