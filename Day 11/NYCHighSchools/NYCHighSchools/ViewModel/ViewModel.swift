@@ -14,14 +14,12 @@ class ViewModel {
     
     func getHighSchoolList(completionHandler: @escaping (NetworkManagerError?) -> Void) {
         networkManager.getData(urlString: highSchoolListURL, type: [HighSchool].self) { result in
-//            print(result)
             switch result {
             case .success(let highschoolList):
                 self.highSchoolList = highschoolList
                 completionHandler(nil)
             case .failure(let failure):
                 completionHandler(failure)
-//                print(failure)
             }
         }
     }

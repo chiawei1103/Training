@@ -94,9 +94,11 @@ extension ViewController: UITableViewDataSource {
         
         cell?.schoolImage.image = UIImage(systemName: "\(imageName).circle")
         
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
+        backgroundView.layer.cornerRadius = 15
+        cell?.selectedBackgroundView = backgroundView
         
-        
-//        cell.textLabel?.text = highSchoolList[indexPath.row].schoolName
         return cell ?? UITableViewCell()
     }
 }
