@@ -1,0 +1,51 @@
+
+/* Class = "UILabel"; text = "3000"; ObjectID = "53P-e8-yp9"; */
+"53P-e8-yp9.text" = "3000";
+
+/* Class = "UILabel"; text = "SchoolName"; ObjectID = "5IK-FO-EEF"; */
+"5IK-FO-EEF.text" = "SchoolName";
+
+/* Class = "UILabel"; text = ": "; ObjectID = "BWC-N4-sT7"; */
+"BWC-N4-sT7.text" = ": ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ExY-H3-Pq9"; */
+"ExY-H3-Pq9.text" = "Label";
+
+/* Class = "UILabel"; text = "Critical Redaing"; ObjectID = "GAT-C0-xfg"; */
+"GAT-C0-xfg.text" = "Critical Redaing";
+
+/* Class = "UILabel"; text = "800"; ObjectID = "HR2-ke-Q6n"; */
+"HR2-ke-Q6n.text" = "800";
+
+/* Class = "UILabel"; text = ": "; ObjectID = "JCO-DJ-MvL"; */
+"JCO-DJ-MvL.text" = ": ";
+
+/* Class = "UILabel"; text = "About School: "; ObjectID = "Jfa-87-Szb"; */
+"Jfa-87-Szb.text" = "About School: ";
+
+/* Class = "UILabel"; text = "Math"; ObjectID = "M4B-8B-7qJ"; */
+"M4B-8B-7qJ.text" = "Math";
+
+/* Class = "UILabel"; text = "Writing"; ObjectID = "M60-1x-g9R"; */
+"M60-1x-g9R.text" = "Writing";
+
+/* Class = "UINavigationItem"; title = "SchoolList"; ObjectID = "Vwd-Gx-SKu"; */
+"Vwd-Gx-SKu.title" = "SchoolList";
+
+/* Class = "UILabel"; text = "Total students: "; ObjectID = "YZC-hS-ZRW"; */
+"YZC-hS-ZRW.text" = "Total students: ";
+
+/* Class = "UILabel"; text = "800"; ObjectID = "ZkY-7n-B9T"; */
+"ZkY-7n-B9T.text" = "800";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "iou-zC-8wg"; */
+"iou-zC-8wg.text" = "Description";
+
+/* Class = "UILabel"; text = ": "; ObjectID = "jVc-1U-6QM"; */
+"jVc-1U-6QM.text" = ": ";
+
+/* Class = "UILabel"; text = "SAT Score: "; ObjectID = "jhO-4u-zus"; */
+"jhO-4u-zus.text" = "SAT Score: ";
+
+/* Class = "UILabel"; text = "800"; ObjectID = "osQ-6H-TS5"; */
+"osQ-6H-TS5.text" = "800";
